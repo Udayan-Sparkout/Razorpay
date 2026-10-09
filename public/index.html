@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Razorpay Payment Gateway</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Razorpay Payment Gateway Integration</h1>
+      <form id="paymentForm">
+        <label for="amount">Amount (in INR):</label>
+        <input type="number" id="amount" name="amount" required />
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="contact">Contact Number:</label>
+        <input type="number" id="contact" name="contact" required />
+        <label for="currency">Currency:</label>
+        <select id="currency" name="currency" required>
+          <option value="INR">INR</option>
+          <option value="USD">USD</option>
+          <option value="EUR">EUR</option>
+        </select>   
+        <button type="submit" id="create-order-btn">Pay Now</button>
+        <button type="button" id="order">Pay with Checkout</button>
+      </form>
+      <p id="order-status" role="status" aria-live="polite"></p>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+  </body>
